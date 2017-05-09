@@ -94,6 +94,13 @@ char substitutionCipher::substitute(char c)
     return c;
 }
 
+// char substitutionCipher::invertSub(char c)
+// {
+//     c = (substitute(c) - (7* (int)c + 7) + 11);
+
+//     return c;
+// }
+
 char substitutionCipher::invertSub(char c) // implementing the inverse of the modulo was cumbersome, excuse the brute nature
 {
     int inputAsInt = c;

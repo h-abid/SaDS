@@ -1,0 +1,40 @@
+
+\documentclass[a4paper]{article}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry} % page settings
+\usepackage{amsmath} % provides many mathematical environments & tools
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{algorithm,caption}
+\usepackage[utf8]{inputenc}
+\usepackage[noend]{algpseudocode}
+\graphicspath{ {images/} }
+\usepackage{xparse}% http://ctan.org/pkg/xparse
+\usepackage{mathtools}
+\usepackage{courier}
+\usepackage{verbatim}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+
+\setlength{\parindent}{0mm}
+\titleformat{\subsection}[runin]
+{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsubsection}[runin]
+{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+	
+	\title{Secure \& Dependable Systems \\  Spring 2017 \\ Assignment 06}
+	\author{Humza Abid}
+	\maketitle
+	
+	\subsection*{Problem 6.3} \textit{Theory: Security Analysis}
+	\subsubsection*{1.} The substitution boxes change any bit of the input byte to at least two bits of the output byte, all the while sending the output bits to different sub-blocks. Thus changing one bit of the plaintext results in at least a two bit different in the output of one of the blocks in the first round. The mixing permutation sends the two bits to different blocks in each subsequent round, increasing the different in the number of bits. Although there are cases where collisions occur, the net effect achieved is that of changing (on average) half of the bits of the resulting ciphertext block. \\
+	
+	Even in the cas eof only one round, the inversion of the permutations, then the S-boxes and then finally that for the key, render it comp-ind secure if probability distribution functions for frequencies cannot be approximated. 
+		
+	\subsubsection*{2.} The adversary can easily (for the single round) determine the key by reverse engineering. 
+ 
+	
+	 
+\end{document}
